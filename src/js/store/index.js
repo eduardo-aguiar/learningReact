@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from "redux";
-import rootReducer from "../reducers/index";
-import { forbiddenWordsMiddleware } from "../middleware";
+import productsReducer from "../reducers/api-redux";
+import fetchProducts  from "../middleware/fetchProducts";
+import { logger } from 'redux-logger'
 import thunk from "redux-thunk";
 
 
@@ -8,7 +9,7 @@ const storeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 const store = createStore(
-    rootReducer , storeEnhancers(applyMiddleware(forbiddenWordsMiddleware, thunk))
+    productsReducer , applyMiddleware(thunk, logger)
     );
 
 

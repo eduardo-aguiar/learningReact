@@ -1,5 +1,6 @@
 import { ADD_ARTICLE, FOUND_BAD_WORD } from "../constants/action-types";
 import { badWord } from "../actions";
+import { fetchProductsPending, fetchProductsSuccess, fetchProductsError } from '../actions';
 
 
 const forbiddenWords = ["spam", "money"];
@@ -22,3 +23,5 @@ export function forbiddenWordsMiddleware({ dispatch }) {
         };
     };
 }
+
+

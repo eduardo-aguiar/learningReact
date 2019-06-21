@@ -7,6 +7,7 @@ import 'bootstrap';
 
 function mapDispatchToProps(dispatch) {
   return {
+    
     addArticle: article => dispatch(addArticle(article))
   };
 }

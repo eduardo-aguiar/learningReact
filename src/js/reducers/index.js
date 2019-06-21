@@ -7,6 +7,7 @@ const initialState = {
     articles: [],
     remoteArticles: []
   };
+
   function rootReducer(state = initialState, action) {
       if (action.type === ADD_ARTICLE) {
         return Object.assign({}, state, {
@@ -24,5 +25,6 @@ const initialState = {
     return state;
 
   };
+  
 
   export default rootReducer;

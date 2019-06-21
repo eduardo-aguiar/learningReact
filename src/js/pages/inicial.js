@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import App from "../components/App";
+import Async from "./async";
 
 function Index() {
   return <h2>Home</h2>;
 }
 
 function About() {
-  return <h2>About</h2>;
+  return <h2>Async</h2>;
 }
 
 function Users() {
@@ -26,7 +27,7 @@ function AppRouter() {
               <Link className="nav-link" to="/">Home</Link>
           
           
-              <Link className="nav-link" to="/about/">About</Link>
+              <Link className="nav-link" to="/about/">Async/Await</Link>
           
           
               <Link className="nav-link" to="/users/">Users</Link>
@@ -36,7 +37,7 @@ function AppRouter() {
         </nav>
 
         <Route path="/" exact component={App} />
-        <Route path="/about/" component={About} />
+        <Route path="/about/" component={Async} />
         <Route path="/users/" component={Users} />
       </div>
     </Router>
